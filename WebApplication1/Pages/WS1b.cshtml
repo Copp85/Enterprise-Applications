@@ -1,5 +1,6 @@
 ﻿@page
- 
+@model WebApplication1.Pages.WS1bModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     Layout = null;
 }
@@ -15,13 +16,23 @@
     <form method="post">
         <label for="Number1">Number1</label>
         <input type="number" id="FNumber" name="Number1" value="">
-        <button type="submit">Enter Your first number</button>
+
 
         <label for="Number2">Number2</label>
         <input type="number" id="SNumber" name="Number2">
-        <button type="submit">Enter Your second number</button>
+        <button type="submit">Enter Your number</button>
+
+        <label for="addition">Add</label>
+        <input type="radio" name="sums" id="add" value="add">
+        <label for="subtraction">Minus</label>
+        <input type="radio" name="sums" id="minus" value="minus">
+        <label for="Multiplication">Multiply</label>
+        <input type="radio" name="sums" id="multiply" value="multiply">
+        <label for="division">Divide</label>
+        <input type="radio" name="sums" id="division" value="division">
+
 
     </form>
-    <p></p>
+    <h2>@Model.Message</h2>
 </body>
 </html>
