@@ -1,0 +1,33 @@
+﻿@page
+@model WebApplication1.Pages.ws1Model
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ws1</title>
+</head>
+<body>
+
+    <ul>
+
+        @foreach (string teams in @Model.MyTestArray)
+            {
+                <li>@teams</li>
+            }
+    </ul>
+
+    <form method="post">
+        <label for="FirstName">Enter Your name</label>
+        <input type="text" id="FName" name="FirstName">
+        <button type="submit">Press Here</button>
+
+    </form>
+    @Model.Message
+</body>
+</html>
