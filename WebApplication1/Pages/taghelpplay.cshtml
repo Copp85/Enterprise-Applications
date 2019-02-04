@@ -1,0 +1,76 @@
+﻿@page
+@model WebApplication1.Pages.taghelpplayModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>taghelpplay</title>
+</head>
+<body>
+    <form method="post">
+        <label asp-for=Number1>Enter your int number</label>
+        <input asp-for=Number1 />
+
+        <label asp-for=Number2>Enter your int? number</label>
+        <input asp-for=Number2 />
+
+        <label asp-for=Number3>Enter your double number</label>
+        <input asp-for=Number3 />
+
+        <label asp-for=Number4>Enter your double? number</label>
+        <input asp-for=Number4 />
+
+        <label asp-for=Number5>Enter your decimal number</label>
+        <input asp-for=Number5 />
+
+        <label asp-for=Number6>Enter your decimal? number</label>
+        <input asp-for=Number6 />
+
+        <label asp-for=Number6>Enter your float number</label>
+        <input asp-for=Number6 />
+
+        <label asp-for=Number7>Enter your float? number</label>
+        <input asp-for=Number7 />
+
+        <label asp-for=SomeString>Enter some Text</label>
+        <input asp-for=SomeString />
+
+        <label asp-for=TheDate>Enter the date</label>
+        <input asp-for=TheDate>
+
+        <label asp-for=IsContactAllowed>Is contact allowed</label>
+        <input asp-for=IsContactAllowed>
+
+
+        <label for="Winter">
+            <input value="Winter" id="Winter" type="radio" asp-for="Season">
+            Winter
+        </label>
+        <label for="Spring">
+            <input value="Spring" id="Spring" type="radio" asp-for="Season">
+            Spring
+        </label>
+        <label for="Summer">
+            <input value="Summer" id="Summer" type="radio" asp-for="Season">
+            Summer
+        </label>
+        <label for="Autumn">
+            <input value="Autumn" id="Autumn" type="radio" asp-for="Season">
+            Autumn
+        </label>
+
+        
+
+        <button type="submit">Enter</button>
+
+    </form>
+    <h2>@Model.Message</h2>
+    
+</body>
+</html>
