@@ -53,6 +53,7 @@ namespace WebApplication1.Pages
 
         public void OnPost ()
         {
+            //Message = string.Format("You selected {0}", Season);
             if (Request.Form["Season"] == "Spring")
                 Message = "You selected Spring";
             if (Request.Form["Season"] == "Summer")
