@@ -1,0 +1,50 @@
+﻿@page
+@model EntAppSecond.Pages.FormWSModel
+@{
+    ViewData["Title"] = "FormWS";
+}
+
+<h2>FormWS</h2>
+
+
+<form method="post" class="form-horizontal">
+    <div class="form-group">
+        <label for="FirstName" class="col-md-2">Enter Your name</label>
+        <div class="col-md-2">
+        <input type="text" id="FName" name="FirstName">
+            </div>
+    </div>
+
+    <div class="form-group">
+        <label for="Red" class="col-md-2">
+            <input value="Red" id="Red" type="radio" asp-for="Colour">
+            Red
+        </label>
+        <label for="Yellow" class="col-md-2">
+            <input value="Yellow" id="Yellow" type="radio" asp-for="Colour">
+            Yellow
+        </label>
+        <label for="Black" class="col-md-2">
+            <input value="Black" id="Black" type="radio" asp-for="Colour">
+            Black
+        </label>
+
+        <div class="checkbox">
+            <label>
+                <input asp-for=Consent /> I consent to everything
+            </label>
+        </div>
+     </div>
+        @*<fieldset>
+                <legend>Consent</legend>
+
+                <input asp-for=Consent />
+                <label asp-for=Consent> I consent to everything</label>
+
+            </fieldset>*@
+
+        <button type="submit">Enter</button>
+
+
+</form>
+

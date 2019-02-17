@@ -5,13 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - EntAppSecond</title>
 
-
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" />
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 <body>
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            <a asp-page="/index" class="navbar-brand">Standard</a>
+            </div>
+           <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a asp-page="/FormWS">FormWS</a></li>
+                <li><a asp-page="/Page_2">Page 2</a></li>
+                 <li><a asp-page="/Page_3">Page 3</a></li>
+              </ul>
+
+           </div>
+        </div>
+    </nav>
 
     <div class="container body-content">
         @RenderBody()
@@ -21,14 +43,11 @@
         </footer>
     </div>
 
-
     <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
     <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
-
     @RenderSection("Scripts", required: false)
 </body>
 </html>
