@@ -1,5 +1,6 @@
 ﻿@page
 @model EntAppSecond.Pages.Students.CreateModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     ViewData["Title"] = "Create";
 }
@@ -23,11 +24,51 @@
         <label asp-for=Student.StudentID></label>
         <input asp-for=Student.StudentID>
 
-        <div asp-validation-summary="All"></div>
+        @*<div asp-validation-summary="All"></div>*@
         <Span asp-validation-for="Student.StudentID"></Span>
 
-        <button type="submit">Press Me</button>
     </div>
+
+    <div>
+        <label asp-for=Student.DOB></label>
+        <input asp-for=Student.DOB>
+
+        @*<div asp-validation-summary="All"></div>*@
+        @*<Span asp-validation-for="Student.DOB"></Span>*@
+
+    </div>
+
+    <div>
+        <label asp-for=Student.NoOfModules></label>
+        <input asp-for=Student.NoOfModules>
+
+        @*<div asp-validation-summary="All"></div>*@
+        <Span asp-validation-for="Student.NoOfModules"></Span>
+
+    </div>
+
+    <div>
+        <label asp-for=Student.Height></label>
+        <input asp-for=Student.Height>
+
+        @*<div asp-validation-summary="All"></div>*@
+        <Span asp-validation-for="Student.Height"></Span>
+
+    </div>
+
+    <div>
+        <label asp-for=Student.Email></label>
+        <input asp-for=Student.Email />
+    </div>
+
+    <div>
+        <label asp-for=Student.EmailConfirmation></label>
+        <input asp-for=Student.EmailConfirmation />
+    </div>
+
+    <button type="submit">Press Me</button>
 </form>
+
+
 
 

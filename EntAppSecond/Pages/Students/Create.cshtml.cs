@@ -10,10 +10,18 @@ namespace EntAppSecond.Pages.Students
 {
     public class CreateModel : PageModel
     {
+        [BindProperty]
         public Student Student { get; set; }
+
         public void OnGet()
         {
 
+        }
+
+        public void OnPost()
+        {
+            if (Student.Email != Student.EmailConfirmation)
+                ModelState.AddModelError("Student.Email", "emails don't match");
         }
     }
 }
